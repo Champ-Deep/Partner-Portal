@@ -88,8 +88,8 @@ if (process.env.CORS_ORIGINS) {
 if (process.env.AUTH_SECRET) {
   app.use(
     '*',
-    initAuthConfig((c) => ({
-      secret: c.env.AUTH_SECRET,
+    initAuthConfig((_c) => ({
+      secret: process.env.AUTH_SECRET,
       pages: {
         signIn: '/account/signin',
         signOut: '/account/logout',

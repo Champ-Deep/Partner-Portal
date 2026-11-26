@@ -4,3 +4,11 @@
 # React Router
 /.react-router/
 /build/
+
+# Local environment files. Commit web/.env.example only.
+.env
+.env.*
+!.env.example
+!.env*.example
+*.env
+.envrc
