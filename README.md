@@ -46,9 +46,11 @@ npm run dev
 
 ---
 
-## Known issue
+## Environment
 
-`web/.env` is currently **committed to the repository** and its `.gitignore` does not cover `.env`. It contains an `AUTH_SECRET`. That secret must be rotated and the file removed from history before this repo is shared or made public. Tracked separately, not fixed silently, because rotating a credential is your call.
+Copy `web/.env.example` to `web/.env` and fill in real values locally, or set the same names in hosting. The app reads `AUTH_SECRET`, `AUTH_URL`, `DATABASE_URL`, and `CORS_ORIGINS` from the process environment. `.env` is gitignored.
+
+`web/.env` used to be committed. It is no longer in the tree, but the old values remain in git history. Rotate `AUTH_SECRET` and the database password inside `DATABASE_URL`, then set the new values in hosting. Do not commit real secrets.
 
 ---
 
